@@ -1,5 +1,7 @@
 import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class BoardController {
@@ -23,18 +25,8 @@ public class BoardController {
 
     public int findCiftGidilirse(Player player, int okey) {
         List<Integer> dublicatedList = player.getNumbers().stream().distinct().collect(Collectors.toList());
+        int ciftCount = player.getNumbers().size()-dublicatedList.size();
         int okeyCount = Collections.frequency(player.getNumbers(), okey);
-        return controlJokerForCiftGidilirse(okeyCount, dublicatedList.size())/2;
+        return (player.getNumbers().size()/2 - (ciftCount + okeyCount));
     }
-
-    private int controlJokerForCiftGidilirse(int okeySayisi, int ciftSayisi) {
-        if (okeySayisi > 0) {
-            return ciftSayisi + 1;
-        } else if (okeySayisi == 0) {
-            return ciftSayisi;
-        } else {
-            return 0;
-        }
-    }
-
 }

@@ -36,20 +36,33 @@ public class NumberDealer {
         this.gosterge = setNewGosterge(getNumbersBeforeDeal());
         this.okey = setOkeyFromGosterge(getGosterge());
         this.preparedBoards = dealNewHand(getNumbersBeforeDeal());
-
     }
 
     // Random Gösterge Seçilip Listeden Çıkartılması
     private int setNewGosterge(List<Integer> numbers) {
-        int gostergeLocation = (int) (Math.random() * ((numbers.size() / 2) - 1));
+        int gostergeLocation = (int) (Math.random() * (numbers.size()));
         int gosterge = numbers.get(gostergeLocation);
+        if(gosterge == 52){
+            gostergeLocation = replaceGostergeIfFakeOkey(numbers);
+            numbers.remove(gostergeLocation);
+            return numbers.get(gostergeLocation-1);
+        }
         numbers.remove(gostergeLocation);
         return gosterge;
     }
 
+    private int replaceGostergeIfFakeOkey(List<Integer> numbers){
+        int index = numbers.size();
+        while(true){
+            if(numbers.get(index-1)!=52){
+                return index-1;
+            }
+        }
+    }
+
     // Gösterden Okey Üretilmesinin Sağlandığı Bölüm
     private int setOkeyFromGosterge(int gosterge) {
-        if (gosterge % 12 == 0 && gosterge != 0) {
+        if ((gosterge + 1)%13 == 0 && gosterge != 0) {
             return (gosterge - 12);
         }else {
             return (gosterge + 1);
@@ -65,6 +78,4 @@ public class NumberDealer {
                 .collect(Collectors.toList());
         return playerBoards;
     }
-
-
 }

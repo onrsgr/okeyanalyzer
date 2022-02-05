@@ -12,7 +12,7 @@ public class NumberInitializer {
     // Okeyde Kullanılacak Taşların Hazırlanması
     private static List<Integer> getNewNumbers(){
         gameNumbers = Stream.iterate(0, n -> n + 1)
-                .limit(52)
+                .limit(53)
                 .collect(Collectors.toList());
         gameNumbers.addAll(gameNumbers);
         return gameNumbers;

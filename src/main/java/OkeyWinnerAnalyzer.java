@@ -1,5 +1,3 @@
-import numbers.NumberDealer;
-
 public class OkeyWinnerAnalyzer {
 
 
@@ -7,10 +5,10 @@ public class OkeyWinnerAnalyzer {
 
         System.out.println("Hello Digitoy Games!");
 
-        NumberDealer nd = new NumberDealer();
+        GameController gameController = new GameController();
 
         while (true) {
-            nd.prepareNewHand();
+            gameController.newGame();
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

@@ -1,6 +1,5 @@
 public class OkeyWinnerAnalyzer {
 
-
     public static void main(String[] args) {
 
         System.out.println("Hello Digitoy Games!");
@@ -10,7 +9,8 @@ public class OkeyWinnerAnalyzer {
         while (true) {
             gameController.newGame();
             try {
-                Thread.sleep(1000);
+
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

@@ -51,6 +51,7 @@ public class NumberDealer {
         return gosterge;
     }
 
+    // Gösterge Sahte Okey Çıkarsa Göstergeyi Değiştiri
     private int replaceGostergeIfFakeOkey(List<Integer> numbers){
         int index = numbers.size();
         while(true){
@@ -60,7 +61,7 @@ public class NumberDealer {
         }
     }
 
-    // Gösterden Okey Üretilmesinin Sağlandığı Bölüm
+    // Göstergeden Okey Üretilmesinin Sağlayan Method
     private int setOkeyFromGosterge(int gosterge) {
         if ((gosterge + 1)%13 == 0 && gosterge != 0) {
             return (gosterge - 12);

@@ -18,7 +18,6 @@ public class GameController {
         }
     }
     public void newGame() {
-
         numberDealer.prepareNewHand();
         distributeNumbersToBoards(this.boards, this.numberDealer, this.starterPlayerIndex);
         boards.forEach(control -> control.processBoardsAndGetMinimum());

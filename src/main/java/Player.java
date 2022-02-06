@@ -3,9 +3,9 @@ import java.util.List;
 public class Player {
 
     private List<Integer> numbers;
-    private boolean hasJoker;
+    private boolean hasOkey;
     private boolean hasGosterge;
-    private boolean hasFakeJoker;
+    private boolean hasFakeOkey;
 
     public List<Integer> getNumbers() {
         return numbers;
@@ -15,15 +15,15 @@ public class Player {
         this.numbers = numbers;
     }
 
-    public boolean isHasJoker() {
-        return hasJoker;
+    public boolean hasOkey() {
+        return hasOkey;
     }
 
-    public void setHasJoker(boolean hasJoker) {
-        this.hasJoker = hasJoker;
+    public void setHasOkey(boolean hasOkey) {
+        this.hasOkey = hasOkey;
     }
 
-    public boolean isHasGosterge() {
+    public boolean hasGosterge() {
         return hasGosterge;
     }
 
@@ -31,21 +31,21 @@ public class Player {
         this.hasGosterge = hasGosterge;
     }
 
-    public boolean isHasFakeJoker() {
-        return hasFakeJoker;
+    public boolean hasFakeOkey() {
+        return hasFakeOkey;
     }
 
-    public void setHasFakeJoker(boolean hasFakeJoker) {
-        this.hasFakeJoker = hasFakeJoker;
+    public void setHasFakeOkey(boolean hasFakeOkey) {
+        this.hasFakeOkey = hasFakeOkey;
     }
 
     @Override
     public String toString() {
         return "Player{" +
                 "numbers=" + numbers +
-                ", hasJoker=" + hasJoker +
+                ", hasJoker=" + hasOkey +
                 ", hasGosterge=" + hasGosterge +
-                ", hasFakeJoker=" + hasFakeJoker +
+                ", hasFakeJoker=" + hasFakeOkey +
                 '}';
     }
 }

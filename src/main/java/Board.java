@@ -43,7 +43,6 @@ public class Board {
         player.setHasFakeOkey(numbers.contains(52));
         player.setHasOkey(numbers.contains(numberDealer.getOkey()));
         player.setHasGosterge(numbers.contains(numberDealer.getGosterge()));
-        System.out.println(player);
         return player;
     }
 

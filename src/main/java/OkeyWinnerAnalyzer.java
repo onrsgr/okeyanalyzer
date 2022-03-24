@@ -2,7 +2,7 @@ public class OkeyWinnerAnalyzer {
 
     public static void main(String[] args) {
 
-        System.out.println("Hello Digitoy Games!");
+        System.out.println("Hello !");
 
         GameController gameController = new GameController();
 
